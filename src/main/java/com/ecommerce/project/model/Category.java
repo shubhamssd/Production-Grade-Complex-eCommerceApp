@@ -21,7 +21,7 @@ public class Category {
     @Size(min = 5 , message = "Category name must contain at least 5 character")
     private String categoryName;
 
-    @OneToMany()
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
 
 
